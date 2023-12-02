@@ -35,7 +35,7 @@ struct Day01: AdventDay {
     }
     
     func part2() -> Any {
-        return entities
+        entities
             .map { parse($0) }
             .compactMap { firstAndLast($0.components(separatedBy: .letters).joined()) }
             .reduce(0) { $0 + Int($1)! }
